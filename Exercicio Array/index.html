@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        body {
+            background: rgb(37, 115, 218);
+            font: normal 15pt Arial;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Atividade 01 - Array</h2>
+    <p>Informe um numero:</p>
+    <button type="submit" value="Inserir" id="Inserir_Inicial" onclick="inInicial()">Inserir no inicio</button>
+    <input type="number" name="numeros" id="inputNumber" autofocus placeholder="Informe um valor">
+    <button type="submit" value="Inserir" id="Inserir_Final" onclick="inFinal()">Inserir no final</button>
+    <button type="reset" value="Limpar" id="btLimpar" onclick="Limparvet()">Limpar</button>
+    <ol id="lista"></ol>
+    <div id="res"></div>
+    <hr>
+    Informe um valor do índice: <input id="indice" type="text" />
+    <button id="submit4" onclick='inseind()'>Inserir valor ao índice</button>
+    <button id="submit5" onclick='removind()'>Remover valor do índice</button>
+    <ol id="lista2"></ol>
+    <hr>
+
+    <footer>
+        <!--Rodape-->
+        <p>&copy; Atividade de Programação Web</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
