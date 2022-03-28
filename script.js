@@ -8,59 +8,35 @@ let indice = [];
 let valor;
 let texto;
 
-function isNumero(n) {
-  if (Number(n) >= 1 && Number(n) <= 100) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function inLista(n, l) {
-  if (l.indexOf(Number(n)) != -1) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
 function inFinal() {
   valor = parseInt(document.getElementById("inputNumber").value);
-  if (isNumero(num.value) && !inLista(num.value, vet)) {
-    vet.push(Number(num.value));
-    let item = document.createElement("option");
-    item.text = `Valor ${num.value} adicionado.`;
-    lista.appendChild(item);
-    res.innerHTML = "";
+  if (isNaN(valor)) {
+    window.alert("Não é um número!");
+    exit();
   } else {
-    window.alert("Valor inválido ou já encontrado na lista.");
-  }
-  valor = document.getElementById("inputNumber").value = "";
-  valor = document.getElementById("inputNumber").focus();
-
-  lista.innerHTML = "";
-  for (let i = 0; i < vet.length; ++i) {
-    lista.innerHTML += `<li>Vetor com valor ${vet[i]}</li>`;
+    vet.push(valor);
+    valor = document.getElementById("inputNumber").value = "";
+    valor = document.getElementById("inputNumber").focus();
+    lista.innerHTML = "";
+    for (let i = 0; i < vet.length; ++i) {
+      lista.innerHTML += `<li>${vet[i]}</li>`;
+    }
   }
 }
 
 function inInicial() {
   valor = parseInt(document.getElementById("inputNumber").value);
-  if (isNumero(num.value) && !inLista(num.value, vet)) {
-    vet.push(Number(num.value));
-    let item = document.createElement("option");
-    item.text = `Valor ${num.value} adicionado.`;
-    lista.appendChild(item);
-    res.innerHTML = "";
+  if (isNaN(valor)) {
+    window.alert("Não é um número!");
+    exit();
   } else {
-    window.alert("Valor inválido ou já encontrado na lista.");
-  }
-  valor = document.getElementById("inputNumber").value = "";
-  valor = document.getElementById("inputNumber").focus();
-
-  lista.innerHTML = "";
-  for (let i = 0; i < vet.length; ++i) {
-    lista.innerHTML += `<li>Vetor com valor ${vet[i]}</li>`;
+    vet.unshift(valor);
+    valor = document.getElementById("inputNumber").value = "";
+    valor = document.getElementById("inputNumber").focus();
+    lista.innerHTML = "";
+    for (let i = 0; i < vet.length; ++i) {
+      lista.innerHTML += `<li>${vet[i]}</li>`;
+    }
   }
 }
 
